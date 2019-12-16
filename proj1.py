@@ -175,14 +175,15 @@ class Literal(State):
         elif input_list[0] in _operator:
             self.append_to_output( output_list )
             return OPERATOR
-
-elif input_list[0] in _separator:
-    self.append_to_output( output_list )
-    return SEPARATOR
-        
-        elif input_list[0] in _identifier:
+            elif input_list[0] in _separator:
             self.append_to_output( output_list )
-            return IDENTIFIER
+                return SEPARATOR
+
+
+
+elif input_list[0] in _identifier:
+    self.append_to_output( output_list )
+    return IDENTIFIER
         
         else:
             self.append_to_output( output_list )
