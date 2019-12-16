@@ -117,13 +117,7 @@ class Identifier(State):
 			input_list.pop(0)
 			return START
 
-        elif input_list[0] in _separator:
-            self.append_to_output( output_list )
-            return SEPARATOR
-       
-        elif input_list[0] in _identifier:
-            self.append_to_output( output_list )
-            return IDENTIFIER
+        
 
 
 		elif input_list[0] in _operator:
