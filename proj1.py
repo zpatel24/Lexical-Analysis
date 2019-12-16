@@ -175,19 +175,19 @@ class Literal(State):
         elif input_list[0] in _operator:
             self.append_to_output( output_list )
             return OPERATOR
-            elif input_list[0] in _separator:
-            self.append_to_output( output_list )
-                return SEPARATOR
 
-
-
-elif input_list[0] in _identifier:
-    self.append_to_output( output_list )
-    return IDENTIFIER
+elif input_list[0] in _separator:
+    self.append_to_output( output_list)
+    return SEPARATOR
         
-        else:
-            self.append_to_output( output_list )
-            return END
+        elif input_list[0] in _identifier:
+            self.append_to_output(output_list)
+            return IDENTIFIER
+
+
+    else:
+        self.append_to_output( output_list )
+        return END
 
 ### TASK 04 (OF 04): COMPLETE THE SEPARATOR CLASS
 ## Separator ##
