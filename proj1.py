@@ -65,17 +65,17 @@ class Start(State):
 		elif input_list[0] in _operator:
 			return OPERATOR
 
-        elif input_list[0] in _separator:
-            return SEPARATOR
+                #elif input_list[0] in _separator:
+                #return SEPARATOR
                
-        elif input_list[0] in _identifier:
-            return IDENTIFIER
+               #elif input_list[0] in _identifier:
+               #return IDENTIFIER
 
-		#elif ...
-		#	return SEPARATOR
+		elif input_list[0] in _separator:
+			return SEPARATOR
 
-		#elif ...
-		#	return IDENTIFIER
+		elif input_list[0] in _identifier:
+			return IDENTIFIER
 
 		else:
 			return END
